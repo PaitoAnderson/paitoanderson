@@ -1,0 +1,39 @@
+.main {
+	background-color: #1BC6B0;
+}
+.jumbotron {
+	border-radius: 0px 0px 6px 6px
+}
+.project {
+	margin-top: 20px;
+}
+.project-img {
+	width: 100%;
+	margin-bottom: 10px;
+}
+.project-img-sub {
+	width: 50%;
+	margin-bottom: 10px;
+	float: left;
+}
+
+.project .left {
+	padding-right: 5px;
+}
+
+.project .right {
+	padding-left: 5px;
+}
+
+.btn-custom {
+	color: white;
+	border-color: #1BC6B0;
+	background-color: #1BC6B0;
+}
+.btn-custom:hover,
+.btn-custom:focus,
+.btn-custom:active,
+.btn-custom.active {
+  background-color: #26b19f;
+  border-color: #26b19f;
+}
