@@ -73,7 +73,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 	            <h4>Warning!</h4>
 	            <p>You are using an outdated browser, click below to upgrade.</p>
 	            <p>
-	            	<a class="btn btn-danger" target="_blank" href="http://www.updatebrowser.net/">Update Browser</a>
+	            	<a class="btn btn-danger" target="_blank" href="http://whatbrowser.org/">Update Browser</a>
 	            </p>
           	</div>
 		<![endif]-->
