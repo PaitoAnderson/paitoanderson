@@ -40,7 +40,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     <title>Paito Anderson</title>
 
-    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/screen.css" rel="stylesheet">
     
 	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -89,9 +89,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 							<h4 class="modal-title">Contact Me</h4>
 						</div>
 						<div class="modal-body">
-							<input type="text" placeholder="Your Name" name="fullname" id="fullname" required="required"/><br />
-							<input type="email" placeholder="Your E-Mail" name="email" id="email" required="required" /><br />
-							<textarea cols="45" rows="5" placeholder="Your Message" name="message" id="message" required="required"></textarea>
+							<input type="text" class="form-control" placeholder="Your Name" name="fullname" id="fullname" required="required"/><br />
+							<input type="email" class="form-control" placeholder="Your E-Mail" name="email" id="email" required="required" /><br />
+							<textarea cols="45" class="form-control" rows="5" placeholder="Your Message" name="message" id="message" required="required"></textarea>
 						</div>
 						<div class="modal-footer">
 							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -114,7 +114,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 	</div>
 	
 	<script src="js/jquery.js"></script>
-	<script src="js/bootstrap.js"></script>
+	<script src="js/bootstrap.min.js"></script>
 	
 	<script type="text/javascript">
 
