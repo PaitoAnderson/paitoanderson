@@ -55,7 +55,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 		<div class="jumbotron">
 			<h1>PAITO ANDERSON</h1>
 			<p class="lead">A Web Designer from Windsor, Ontario.</p>
-			<p><a data-toggle="modal" href="#ContactMe" class="btn btn-large btn-custom">Contact Me</a></p>
+			<p><a data-toggle="modal" href="#ContactMe" class="btn btn-lg btn-custom">Contact Me</a></p>
 		</div>
 		
 		<?php

@@ -34,6 +34,7 @@
 .btn-custom:focus,
 .btn-custom:active,
 .btn-custom.active {
-  background-color: #26b19f;
-  border-color: #26b19f;
+	color: white;
+	background-color: #26b19f;
+	border-color: #26b19f;
 }
