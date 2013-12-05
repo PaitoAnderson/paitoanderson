@@ -4,6 +4,7 @@
 .jumbotron {
 	border-radius: 0px 0px 6px 6px
 }
+
 .project {
 	margin-top: 20px;
 }
@@ -16,13 +17,28 @@
 	margin-bottom: 10px;
 	float: left;
 }
-
 .project .left {
 	padding-right: 5px;
 }
-
 .project .right {
 	padding-left: 5px;
+}
+.project-title h1 {
+	text-align: center;
+}
+.project-title h1 a {
+	color: black;
+	font-size: 42px;
+	font-family: 'Open Sans Condensed', sans-serif;
+	padding-bottom: 0px;
+}
+.project-title h1 a:hover,
+.project-title h1 a:focus,
+.project-title h1 a:active,
+.project-title h1 a:active {
+	color: black;
+	text-decoration: none;
+	border-bottom: 2px solid black;
 }
 
 .btn-custom {
