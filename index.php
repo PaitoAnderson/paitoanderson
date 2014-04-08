@@ -12,14 +12,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 	if (strlen($_POST["message"]) < 5) {
 		$error = "Please enter a message.";
 	}
-	
+
 	if (strlen($error) == 0) {
 		//Format Email
 		$to = "pj.paito@gmail.com";
 		$subject = "Message from: " . $_POST["fullname"];
 		$body = $_POST["message"];
 		$headers = "From: " . $_POST["email"] . "\r\nX-Mailer: php";
-		
+
 		//Send Email
 		if (mail($to, $subject, $body, $headers)) {
 			$success = "Message was sent!";
@@ -43,12 +43,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/screen.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
-    
-	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-	<!--[if lt IE 9]>
-	  <script src="js/html5shiv.js"></script>
-	  <script src="js/respond/respond.min.js"></script>
-	<![endif]-->
 </head>
 <body class="main">
 	<!-- Main Content -->
@@ -58,7 +52,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 			<p class="lead">A Web Designer from Windsor, Ontario.</p>
 			<p><a data-toggle="modal" href="#ContactMe" class="btn btn-lg btn-custom">Contact Me</a></p>
 		</div>
-		
+
 		<?php
 		if (strlen($error) > 0) {
 			echo("<div class=\"alert alert-danger fade in\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\">×</button><strong>Error!</strong> " . $error . "</div>");
@@ -78,7 +72,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 	            </p>
           	</div>
 		<![endif]-->
-		
+
 		<!-- Modal -->
 		<div class="modal fade" id="ContactMe">
 			<div class="modal-dialog">
@@ -108,7 +102,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 		<div class="project">
 			<img class="project-img" src="http://placehold.it/1170x427" alt="" />
 		</div>-->
-		
+
 		<div class="project-title">
 			<h1><a target="_blank" href="http://www.mexicanbaker.com/">MEXICAN BAKER</a></h1>
 		</div>
@@ -118,10 +112,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 			<img class="project-img-sub right" src="images/mb-project-sub2.jpg" alt="" />
 		</div>
 	</div>
-	
-	<script src="js/jquery.js"></script>
+
+	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
-	
+
 	<script type="text/javascript">
 	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -131,6 +125,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 	  ga('create', 'UA-9349643-1', 'paitoanderson.com');
 	  ga('send', 'pageview');
 	</script>
-	
+
 </body>
 </html>
