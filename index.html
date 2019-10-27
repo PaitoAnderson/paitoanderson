@@ -1,35 +1,4 @@
-<?php
-
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-
-	//Validation
-	if (strlen($_POST["email"]) < 4) {
-		$error = "Please enter your email address.";
-	}
-	if (strlen($_POST["fullname"]) < 3) {
-		$error = "Please enter your name.";
-	}
-	if (strlen($_POST["message"]) < 5) {
-		$error = "Please enter a message.";
-	}
-
-	if (strlen($error) == 0) {
-		//Format Email
-		$to = "pj.paito@gmail.com";
-		$subject = "Message from: " . $_POST["fullname"];
-		$body = $_POST["message"];
-		$headers = "From: " . $_POST["email"] . "\r\nX-Mailer: php";
-
-		//Send Email
-		if (mail($to, $subject, $body, $headers)) {
-			$success = "Message was sent!";
-		} else {
-			$error = "Message delivery failed...please try again.";
-		}
-	}
-}
-
-?><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -53,39 +22,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 			<p><a data-toggle="modal" href="#ContactMe" class="btn btn-lg btn-custom">Contact Me</a></p>
 		</div>
 
-		<?php
-		if (strlen($error) > 0) {
-			echo("<div class=\"alert alert-danger fade in\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\">×</button><strong>Error!</strong> " . $error . "</div>");
-		}
-		if (strlen($success) > 0) {
-			echo("<div class=\"alert alert-success fade in\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\">×</button><strong>Success!</strong> " . $success . "</div>");
-		}
-		?>
-
-		<!--[if lt IE 10]>
-		    <div class="alert alert-block alert-error fade in">
-	            <button type="button" class="close" data-dismiss="alert">&times;</button>
-	            <h4>Warning!</h4>
-	            <p>You are using an outdated browser, click below to upgrade.</p>
-	            <p>
-	            	<a class="btn btn-danger" target="_blank" href="http://whatbrowser.org/">Update Browser</a>
-	            </p>
-          	</div>
-		<![endif]-->
-
 		<!-- Modal -->
 		<div class="modal fade" id="ContactMe">
 			<div class="modal-dialog">
 				<div class="modal-content">
-					<form action="#" method="post">
+					<form name="contact" netlify>
 						<div class="modal-header">
 							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 							<h4 class="modal-title">Contact Me</h4>
 						</div>
 						<div class="modal-body">
-							<input type="text" class="form-control" placeholder="Your Name" name="fullname" id="fullname" required="required"/><br />
-							<input type="email" class="form-control" placeholder="Your E-Mail" name="email" id="email" required="required" /><br />
-							<textarea cols="45" class="form-control" rows="5" placeholder="Your Message" name="message" id="message" required="required"></textarea>
+							<input type="text" class="form-control" placeholder="Your Name" name="name" required="required"/><br />
+							<input type="email" class="form-control" placeholder="Your E-Mail" name="email" required="required" /><br />
+							<textarea cols="45" class="form-control" rows="5" placeholder="Your Message" name="message" required="required"></textarea>
 						</div>
 						<div class="modal-footer">
 							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
